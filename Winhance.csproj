@@ -1,0 +1,988 @@
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{70EB7E93-FE21-70C7-1780-6A1414B03945}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Winhance</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\Microsoft.CSharp.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\Microsoft.VisualBasic.Core.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\Microsoft.VisualBasic.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\Microsoft.Win32.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\Microsoft.Win32.Registry.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\mscorlib.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\netstandard.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.AppContext.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Buffers.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Collections.Concurrent.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Collections.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Collections.Immutable.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Collections.NonGeneric.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Collections.Specialized.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ComponentModel.Annotations.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ComponentModel.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ComponentModel.EventBasedAsync.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ComponentModel.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ComponentModel.TypeConverter.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Configuration.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Console.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Core.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Data.Common.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Data.DataSetExtensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Data.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.Contracts.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.Debug.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.Process.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.StackTrace.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.TextWriterTraceListener.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.Tools.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.TraceSource.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Diagnostics.Tracing.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Drawing.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Drawing.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Dynamic.Runtime.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Formats.Asn1.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Formats.Tar.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Globalization.Calendars.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Globalization.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Globalization.Extensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.Compression.Brotli.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.Compression.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.Compression.FileSystem.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.Compression.ZipFile.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.FileSystem.AccessControl.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.FileSystem.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.FileSystem.Watcher.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.IsolatedStorage.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.MemoryMappedFiles.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.Pipes.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.IO.UnmanagedMemoryStream.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Linq.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Linq.Expressions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Linq.Parallel.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Linq.Queryable.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Memory.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Http.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Http.Json.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.HttpListener.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Mail.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.NameResolution.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.NetworkInformation.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Ping.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Quic.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Requests.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Security.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.ServicePoint.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.Sockets.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.WebClient.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.WebHeaderCollection.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.WebProxy.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.WebSockets.Client.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Net.WebSockets.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Numerics.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Numerics.Vectors.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ObjectModel.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.DispatchProxy.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.Emit.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.Emit.ILGeneration.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.Emit.Lightweight.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.Extensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.Metadata.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Reflection.TypeExtensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Resources.Reader.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Resources.ResourceManager.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Resources.Writer.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.CompilerServices.VisualC.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Extensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Handles.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.InteropServices.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.InteropServices.JavaScript.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Intrinsics.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Loader.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Numerics.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Serialization.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Serialization.Formatters.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Serialization.Json.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Serialization.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Runtime.Serialization.Xml.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.AccessControl.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Claims.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.Cng.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.Csp.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.OpenSsl.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Principal.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.Principal.Windows.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Security.SecureString.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ServiceModel.Web.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ServiceProcess.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Text.Encoding.CodePages.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Text.Encoding.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Text.Encoding.Extensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Text.Encodings.Web.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Text.Json.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Text.RegularExpressions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Channels.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Overlapped.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Tasks.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Tasks.Parallel.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Thread.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.ThreadPool.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Threading.Timer.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Transactions.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Transactions.Local.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.ValueTuple.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Web.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Web.HttpUtility.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Windows.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.Linq.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.ReaderWriter.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.Serialization.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.XDocument.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.XmlDocument.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.XmlSerializer.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.XPath.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\System.Xml.XPath.XDocument.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\ref\WindowsBase.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\Winhance.Core.dll" />
+    <Content Include="src\Winhance.Core\bin\Debug\net9.0-windows\Winhance.Core.pdb" />
+    <Content Include="src\Winhance.Core\obj\Debug\net9.0-windows\refint\Winhance.Core.dll" />
+    <Content Include="src\Winhance.Core\obj\Debug\net9.0-windows\ref\Winhance.Core.dll" />
+    <Content Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.csproj.FileListAbsolute.txt" />
+    <Content Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.dll" />
+    <Content Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.pdb" />
+    <Content Include="src\Winhance.Core\Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    <Content Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\Winhance.Infrastructure.csproj.FileListAbsolute.txt" />
+    <Content Include="src\Winhance.Infrastructure\Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    <Content Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Winhance.WPF.csproj.FileListAbsolute.txt" />
+    <Content Include="src\Winhance.WPF\Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    <Content Include="src\Winhance.WPF\Resources\AppIcons\LICENSE.txt" />
+    <Content Include="src\Winhance.WPF\Resources\AppIcons\winhance-rocket-black-transparent-bg.ico" />
+    <Content Include="src\Winhance.WPF\Resources\AppIcons\winhance-rocket-white-transparent-bg.ico" />
+    <Content Include="src\Winhance.WPF\Resources\AppIcons\winhance-rocket.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\sendemail-validate.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\main" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\pack\pack-615d88a7576f6001b5b600559767a8aa7f9acfaf.idx" />
+    <None Include=".git\objects\pack\pack-615d88a7576f6001b5b600559767a8aa7f9acfaf.pack" />
+    <None Include=".git\objects\pack\pack-615d88a7576f6001b5b600559767a8aa7f9acfaf.rev" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\main" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include=".vs\Winhance\CopilotIndices\17.13.444.19527\CodeChunks.db" />
+    <None Include=".vs\Winhance\CopilotIndices\17.13.444.19527\SemanticSymbols.db" />
+    <None Include=".vs\Winhance\FileContentIndex\22d6b3f8-0c94-4415-8363-7d50cd4a75c7.vsidx" />
+    <None Include=".vs\Winhance\FileContentIndex\2fd1259d-b964-4e99-9e1e-eb8e1778e90a.vsidx" />
+    <None Include=".vs\Winhance\FileContentIndex\48f33950-ec6d-49eb-8eb7-0ea713747849.vsidx" />
+    <None Include=".vs\Winhance\FileContentIndex\8c928d7e-b4fe-4de4-a4af-029a7e97873e.vsidx" />
+    <None Include=".vs\Winhance\FileContentIndex\af195e85-770e-4cae-b919-697a11658328.vsidx" />
+    <None Include=".vs\Winhance\v17\.wsuo" />
+    <None Include=".vs\Winhance\v17\DocumentLayout.backup.json" />
+    <None Include=".vs\Winhance\v17\DocumentLayout.json" />
+    <None Include=".vs\Winhance\v17\workspaceFileList.bin" />
+    <None Include="app.config" />
+    <None Include="README.md" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\CimCmdlets\CimCmdlets.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Diagnostics\Diagnostics.format.ps1xml" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Diagnostics\Event.format.ps1xml" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Diagnostics\GetEvent.types.ps1xml" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Diagnostics\Microsoft.PowerShell.Diagnostics.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Security\Security.types.ps1xml" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\Microsoft.WSMan.Management\WSMan.format.ps1xml" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\PSDiagnostics\PSDiagnostics.psd1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\Modules\PSDiagnostics\PSDiagnostics.psm1" />
+    <None Include="src\Winhance.Core\bin\Debug\net9.0-windows\Winhance.Core.deps.json" />
+    <None Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.AssemblyInfoInputs.cache" />
+    <None Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.assets.cache" />
+    <None Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.csproj.AssemblyReference.cache" />
+    <None Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.csproj.CoreCompileInputs.cache" />
+    <None Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.sourcelink.json" />
+    <None Include="src\Winhance.Core\obj\project.assets.json" />
+    <None Include="src\Winhance.Core\obj\project.nuget.cache" />
+    <None Include="src\Winhance.Core\obj\Release\net9.0-windows\Winhance.Core.AssemblyInfoInputs.cache" />
+    <None Include="src\Winhance.Core\obj\Release\net9.0-windows\Winhance.Core.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="src\Winhance.Core\obj\Winhance.Core.csproj.nuget.dgspec.json" />
+    <None Include="src\Winhance.Core\obj\Winhance.Core.csproj.nuget.g.props" />
+    <None Include="src\Winhance.Core\obj\Winhance.Core.csproj.nuget.g.targets" />
+    <None Include="src\Winhance.Core\Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="src\Winhance.Core\Winhance.Core.csproj" />
+    <None Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\Winhance.Infrastructure.AssemblyInfoInputs.cache" />
+    <None Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\Winhance.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\Winhance.Infrastructure.AssemblyInfoInputs.cache" />
+    <None Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\Winhance.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="src\Winhance.Infrastructure\Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="src\Winhance.Infrastructure\Winhance.Infrastructure.csproj" />
+    <None Include="src\Winhance.WPF\App.manifest" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Controls\TaskProgressControl.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Dimensions\Dimensions.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Icons.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\ResourceDictionary.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\CheckBoxStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\ComboBoxStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\ContainerStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\DialogStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\ScrollBarStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\SliderStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\Styles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Styles\ToolTipStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Themes\Themes.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Theme\ColorDictionary.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Views\LoadingWindow.baml" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Winhance.WPF.AssemblyInfoInputs.cache" />
+    <None Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Winhance.WPF.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Controls\TaskProgressControl.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Dimensions\Dimensions.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Icons.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\ResourceDictionary.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\CheckBoxStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\ComboBoxStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\ContainerStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\DialogStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\ScrollBarStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\SliderStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\Styles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Styles\ToolTipStyles.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Themes\Themes.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Theme\ColorDictionary.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Views\LoadingWindow.baml" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Winhance.WPF.AssemblyInfoInputs.cache" />
+    <None Include="src\Winhance.WPF\obj\Release\net9.0-windows\Winhance.WPF.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="src\Winhance.WPF\Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="src\Winhance.WPF\Properties\Settings.settings" />
+    <None Include="src\Winhance.WPF\Resources\Fonts\MaterialSymbolsOutlined.ttf" />
+    <None Include="src\Winhance.WPF\Winhance.WPF.csproj" />
+    <None Include="Winhance.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\ControlType.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\LinkedSettingsLogic.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\LogLevel.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\OptimizationEnums.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\PowerShellStreamType.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\RegistryActionType.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\RegistrySettingStatus.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Enums\UacLevel.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Exceptions\AppLoadingException.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Exceptions\InstallationException.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Exceptions\InstallationStatusException.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Extensions\RegistrySettingExtensions.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Helpers\ValidationHelper.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IConfigurationCoordinatorService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IConfigurationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IDependencyManager.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IDialogService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IFileSystemService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ILogService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IMessengerService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\INavigationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IParameterSerializer.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IParameterSerializerService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IPowerShellExecutionService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IRegistryService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IScheduledTaskService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IScriptBuilderService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IScriptDetectionService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IScriptFactory.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IScriptTemplateProvider.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ISearchable.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ISearchService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ISettingItem.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ISettingsRegistry.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ISystemServices.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\ITaskProgressService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IUnifiedConfigurationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IViewModel.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Interfaces\IVisibleSettingItem.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Messaging\Messages.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\ApplicationSetting.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\ConfigurationFile.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\ConfigurationItem.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\IInstallableItem.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\InstallStatus.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\LinkedRegistrySettings.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\LogMessageEventArgs.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\OperationResult.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\OptimizationConfig.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\OptimizationModels.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\PowerShellProgressData.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\RefreshResult.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\RegistryModels.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\RegistryTestResult.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\TaskProgressDetail.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\TaskProgressEventArgs.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Models\UnifiedConfigurationFile.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Services\DependencyManager.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Services\LoggingService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Services\LogService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Services\ModelMapper.cs" />
+    <Compile Include="src\Winhance.Core\Features\Common\Services\SettingsRegistry.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Enums\CustomizationCategory.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Enums\UacLevel.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Interfaces\IThemeService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Interfaces\IWallpaperService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\CustomizationGroup.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\CustomizationSetting.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\ExplorerCustomizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\StartMenuCustomizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\StartMenuLayouts.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\TaskbarCustomizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Customize\Models\WindowsThemeSettings.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Interfaces\IPowerPlanService.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\DefaultOptimizationConfig.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\ExplorerOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\GamingandPerformanceOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\NotificationOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\OptimizationSetting.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\PowerOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\PowerPlan.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\PrivacyOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\SoundOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\UacOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\Optimize\Models\UpdateOptimizations.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Enums\InstallationErrorType.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Exceptions\InstallationException.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Exceptions\InstallationStatusException.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Exceptions\RemovalException.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Helpers\InstallationErrorHelper.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IAppDiscoveryService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IAppInstallationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IAppLoadingService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IAppRemovalService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IAppService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\ICapabilityInstallationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\ICapabilityRemovalService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IFeatureInstallationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IFeatureRemovalService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IInstallationOrchestrator.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IInstallationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IInstallationStatusService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IPackageManager.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\IScriptGenerationService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Interfaces\ISpecialAppHandlerService.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\AppInfo.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\AppModels.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\CapabilityCatalog.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\CapabilityInfo.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\ExternalAppCatalog.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\FeatureCatalog.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\FeatureInfo.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\RemovalScript.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\SpecialAppHandler.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\WindowsAppCatalog.cs" />
+    <Compile Include="src\Winhance.Core\Features\SoftwareApps\Models\WindowsPackageModels.cs" />
+    <Compile Include="src\Winhance.Core\obj\Debug\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.Core\obj\Debug\net9.0-windows\Winhance.Core.GlobalUsings.g.cs" />
+    <Compile Include="src\Winhance.Core\obj\Release\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="src\Winhance.Core\obj\Release\net9.0-windows\Winhance.Core.AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.Core\obj\Release\net9.0-windows\Winhance.Core.GlobalUsings.g.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Registry\RegistryService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Registry\RegistryServiceCompletion.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Registry\RegistryServiceEnsureKey.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Registry\RegistryServicePowerShell.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Registry\RegistryServiceStatusMethods.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Registry\RegistryServiceTestMethods.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\CapabilityScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\CompositeScriptContentModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\FeatureScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ICapabilityScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\IFeatureScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\IPackageScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\IRegistryScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\IScriptContentModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\IScriptUpdateService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\PackageScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\PowerShellScriptBuilderService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\PowerShellScriptFactory.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\PowerShellScriptTemplateProvider.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\RegistryScriptHelper.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\RegistryScriptModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ScheduledTaskService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ScriptContentModifier.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ScriptGenerationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ScriptGenerationServiceExtensions.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ScriptModifierServiceExtensions.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\ScriptGeneration\ScriptUpdateService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\ConfigurationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\FileSystemService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\FrameNavigationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\JsonParameterSerializer.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\PowerShellExecutionService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\PowerShellHelper.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\ScriptDetectionService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\SearchService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\TaskProgressService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Services\WindowsSystemService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Common\Utilities\PowerShellFactory.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Customize\Services\ThemeService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Customize\Services\WallpaperService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\Optimize\Services\PowerPlanService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\AppDiscoveryService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\AppInstallationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\AppLoadingService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\AppRemovalService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\AppRemovalServiceAdapter.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\AppServiceAdapter.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\BaseInstallationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\CapabilityInstallationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\CapabilityRemovalService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\FeatureInstallationService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\FeatureRemovalService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\InstallationOrchestrator.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\InstallationStatusService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\PackageManager.cs" />
+    <Compile Include="src\Winhance.Infrastructure\Features\SoftwareApps\Services\SpecialAppHandlerService.cs" />
+    <Compile Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\Winhance.Infrastructure.AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\Winhance.Infrastructure.GlobalUsings.g.cs" />
+    <Compile Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\Winhance.Infrastructure.AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\Winhance.Infrastructure.GlobalUsings.g.cs" />
+    <Compile Include="src\Winhance.WPF\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Controls\MaterialSymbol.xaml.cs">
+      <DependentUpon>MaterialSymbol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Controls\ProgressIndicator.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Controls\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Controls\TaskProgressControl.xaml.cs">
+      <DependentUpon>TaskProgressControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\AppliedStatusToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanToGridSpanConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanToReinstallableIconConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanToReinstallableTextConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanToThemeConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanToThemeIconConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BoolToArrowConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\BoolToChevronConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\CategoryToIconConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\CountToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\GreaterThanOneConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\IconNameToSymbolConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\InstalledStatusToColorConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\InstalledStatusToTextConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\InverseCountToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\IsPrimaryToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\LogLevelToColorConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\RegistryHiveToFullNameConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\RegistryValueStatusConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\RemoveActionToVisibilityConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\ScriptStatusToColorConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\ScriptStatusToTextConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\StatusToColorConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\StatusToTextConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\StringToMaximizeIconConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\ViewNameToBackgroundConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Converters\WindowStateToCommandConverter.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Extensions\SettingViewModelExtensions.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Interfaces\IViewModelLocator.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Messages\ResetExpansionStateMessage.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Models\LinkedRegistrySettingWithValue.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Models\LogMessageViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Resources\MaterialSymbols.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Resources\Theme\IThemeManager.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Resources\Theme\ThemeManager.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\ConfigurationCollectorService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\ConfigurationCoordinatorService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\ConfigurationUIService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\ConfigurationApplierService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\ConfigurationPropertyUpdater.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\ConfigurationServiceExtensions.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\CustomizeConfigurationApplier.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\ExternalAppsConfigurationApplier.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\IConfigurationApplierService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\IConfigurationPropertyUpdater.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\ISectionConfigurationApplier.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\IViewModelRefresher.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\OptimizeConfigurationApplier.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\ViewModelRefresher.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\Configuration\WindowsAppsConfigurationApplier.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\DesignTimeDataService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\DialogService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\IDesignTimeDataService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\MessengerService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\UnifiedConfigurationService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\UserPreferencesService.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Services\ViewModelLocator.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Theme\FontLoader.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Theme\MaterialSymbols.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Utilities\FileLogger.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\ApplicationSettingViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\BaseSettingsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\BaseViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\ConfigurationViewModelBase.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\LoadingWindowViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\MainViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\SearchableViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\ViewModels\UnifiedConfigurationDialogViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Common\Views\CustomDialog.xaml.cs">
+      <DependentUpon>CustomDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Views\DonationDialog.xaml.cs">
+      <DependentUpon>DonationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Views\LoadingWindow.xaml.cs">
+      <DependentUpon>LoadingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Common\Views\UnifiedConfigurationDialog.xaml.cs">
+      <DependentUpon>UnifiedConfigurationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Customize\Models\CustomizationAction.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\Models\CustomizationItem.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\Models\CustomizationSettingItem.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\BaseCustomizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\CustomizationResetExtension.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\CustomizationSettingViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\CustomizeResetExtension.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\CustomizeViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\ExplorerCustomizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\StartMenuCustomizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\TaskbarCustomizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\ViewModels\WindowsThemeCustomizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\Views\CustomizeView.xaml.cs">
+      <DependentUpon>CustomizeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Customize\Views\ExplorerCustomizationsView.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Customize\Views\StartMenuCustomizationsView.xaml.cs">
+      <DependentUpon>StartMenuCustomizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Customize\Views\TaskbarCustomizationsView.xaml.cs">
+      <DependentUpon>TaskbarCustomizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Customize\Views\WindowsThemeCustomizationsView.xaml.cs">
+      <DependentUpon>WindowsThemeCustomizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Models\OptimizationAction.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Models\OptimizationItem.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Models\OptimizationSettingItem.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\ExplorerOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\GamingandPerformanceOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\NotificationOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\OptimizationSettingViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\OptimizeViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\PowerOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\PrivacyOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\SoundOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\UpdateOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\ViewModels\WindowsSecurityOptimizationsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\ExplorerOptimizationsView.cs" />
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\GamingandPerformanceOptimizationsView.xaml.cs">
+      <DependentUpon>GamingandPerformanceOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\NotificationOptimizationsView.xaml.cs">
+      <DependentUpon>NotificationOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\OptimizeView.xaml.cs">
+      <DependentUpon>OptimizeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\PowerOptimizationsView.xaml.cs">
+      <DependentUpon>PowerOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\PrivacyOptimizationsView.xaml.cs">
+      <DependentUpon>PrivacyOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\SoundOptimizationsView.xaml.cs">
+      <DependentUpon>SoundOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\UpdateOptimizationsView.xaml.cs">
+      <DependentUpon>UpdateOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\Optimize\Views\WindowsSecurityOptimizationsView.xaml.cs">
+      <DependentUpon>WindowsSecurityOptimizationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Models\ExternalApp.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Models\ExternalAppSettingItem.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Models\ThirdPartyApp.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Models\WindowsApp.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Models\WindowsAppSettingItem.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\ViewModels\AppListViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\ViewModels\CapabilitiesViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\ViewModels\ExternalAppsCategoryViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\ViewModels\ExternalAppsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\ViewModels\SoftwareAppsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\ViewModels\WindowsAppsViewModel.cs" />
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Views\ExternalAppsView.xaml.cs">
+      <DependentUpon>ExternalAppsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Views\SoftwareAppsView.xaml.cs">
+      <DependentUpon>SoftwareAppsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\Features\SoftwareApps\Views\WindowsAppsView.xaml.cs">
+      <DependentUpon>WindowsAppsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Controls\MaterialSymbol.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Controls\TaskProgressControl.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Views\CustomDialog.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Views\DonationDialog.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Views\LoadingWindow.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Customize\Views\ExplorerCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Customize\Views\StartMenuCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Customize\Views\TaskbarCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Customize\Views\WindowsThemeCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\ExplorerOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\GamingandPerformanceOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\NotificationOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\PowerOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\PrivacyOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\SoundOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\UpdateOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Optimize\Views\WindowsSecurityOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Winhance.WPF.AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Winhance.WPF.GlobalUsings.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Controls\MaterialSymbol.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Controls\TaskProgressControl.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Views\CustomDialog.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Views\DonationDialog.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Views\LoadingWindow.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Customize\Views\ExplorerCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Customize\Views\StartMenuCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Customize\Views\TaskbarCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Customize\Views\WindowsThemeCustomizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\ExplorerOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\GamingandPerformanceOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\NotificationOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\PowerOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\PrivacyOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\SoundOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\UpdateOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Optimize\Views\WindowsSecurityOptimizationsView.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\GeneratedInternalTypeHelper.g.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Winhance.WPF.AssemblyInfo.cs" />
+    <Compile Include="src\Winhance.WPF\obj\Release\net9.0-windows\Winhance.WPF.GlobalUsings.g.cs" />
+    <Compile Include="src\Winhance.WPF\Properties\Settings.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="src\Winhance.WPF\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Controls\MaterialSymbol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Controls\SearchBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Controls\TaskProgressControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Converters\Converters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Dimensions\Dimensions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\MaterialSymbolsExample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\ResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\AppItemStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\CheckBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ComboBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ContainerStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\DialogStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ProgressIndicatorStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\RegistryTooltipTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ScrollBarStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\SliderStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\TextStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ToggleSwitchStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Styles\ToolTipStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Themes\Themes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Resources\Theme\ColorDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Views\CustomDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Views\DonationDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Views\LoadingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Common\Views\UnifiedConfigurationDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Customize\Views\CustomizeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Customize\Views\ExplorerCustomizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Customize\Views\StartMenuCustomizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Customize\Views\TaskbarCustomizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Customize\Views\WindowsThemeCustomizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\ExplorerOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\GamingandPerformanceOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\NotificationOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\OptimizeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\PowerOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\PrivacyOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\SoundOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\UpdateOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\Optimize\Views\WindowsSecurityOptimizationsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\SoftwareApps\Views\ExternalAppsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\SoftwareApps\Views\SoftwareAppsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="src\Winhance.WPF\Features\SoftwareApps\Views\WindowsAppsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include="src\Winhance.Core\bin\Release\net9.0-windows\" />
+    <Folder Include="src\Winhance.Core\obj\Release\net9.0-windows\refint\" />
+    <Folder Include="src\Winhance.Core\obj\Release\net9.0-windows\ref\" />
+    <Folder Include="src\Winhance.Infrastructure\bin\Debug\net9.0-windows\" />
+    <Folder Include="src\Winhance.Infrastructure\bin\Release\net9.0-windows\" />
+    <Folder Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\refint\" />
+    <Folder Include="src\Winhance.Infrastructure\obj\Debug\net9.0-windows\ref\" />
+    <Folder Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\refint\" />
+    <Folder Include="src\Winhance.Infrastructure\obj\Release\net9.0-windows\ref\" />
+    <Folder Include="src\Winhance.WPF\bin\Debug\net9.0-windows\" />
+    <Folder Include="src\Winhance.WPF\bin\Release\net9.0-windows\" />
+    <Folder Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\Common\Resources\Converters\" />
+    <Folder Include="src\Winhance.WPF\obj\Debug\net9.0-windows\Features\SoftwareApps\Views\" />
+    <Folder Include="src\Winhance.WPF\obj\Debug\net9.0-windows\refint\" />
+    <Folder Include="src\Winhance.WPF\obj\Debug\net9.0-windows\ref\" />
+    <Folder Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\Common\Resources\Converters\" />
+    <Folder Include="src\Winhance.WPF\obj\Release\net9.0-windows\Features\SoftwareApps\Views\" />
+    <Folder Include="src\Winhance.WPF\obj\Release\net9.0-windows\refint\" />
+    <Folder Include="src\Winhance.WPF\obj\Release\net9.0-windows\ref\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
